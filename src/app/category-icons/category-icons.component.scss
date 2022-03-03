@@ -1,0 +1,59 @@
+section
+{
+    margin-top: 90px;
+    /* margin-bottom: 20px; */
+}
+
+ul
+{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* height: 260px; */
+    text-align: center;
+    background-image: linear-gradient(white 49%,#c59d5f,white 51%);
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+li
+{
+    height: 160px;
+    /* width: 166px; */
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    color: #c59d5f;
+}
+
+
+li:hover
+{
+    background-color: #c59d5f;
+    // filter: invert();
+    color: black;
+    
+}
+img
+{
+    height: 57px;
+}
+h6
+{
+    /* background-color:yellow; */
+    height: fit-content;
+}
+
+div
+{
+    background-color: blue;
+}

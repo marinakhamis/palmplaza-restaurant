@@ -1,0 +1,20 @@
+<div class="our-team">
+
+    <div class="wrapper">
+        <h2> Our team</h2>
+        <div *ngFor="let t of team" class="profile" style="background: url({{t.img}})">
+            <div class=" overlay">
+                <div class="about d-flex flex-column">
+                    <h4> {{t.name}}</h4>
+                    <p> {{t.details}} </p>
+                </div>
+                <ul class="social-icons">
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-linkedin-in"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

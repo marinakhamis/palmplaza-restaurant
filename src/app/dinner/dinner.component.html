@@ -1,0 +1,12 @@
+<section class=" container-md">
+    <div class="ul row">
+        <div class="li col-md-4" *ngFor="let meal of dinnerMeals; let i=index">
+            <h5 class="text-dark bg-white rounded">{{meal.title | uppercase}}</h5>
+            <h6 class=" text-dark bg-white rounded">EGP {{meal.price}} </h6>
+            <div class=" text-center row" >
+                <i class=" fa-solid Icon bg-white fa-cart-plus" (click)="addToCart(meal)"></i>
+            </div>
+            <img class="w-100 rounded" src={{meal.src}} alt="">
+        </div>
+    </div>
+</section>

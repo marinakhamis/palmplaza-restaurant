@@ -1,0 +1,10 @@
+<nav class="nav navbar navbar-fixed-top" [ngClass]="{'bg-dark': isScrolled}">
+    <img src="../../assets/img/logo-light.png" class="light-logo">
+    <ul class="nav-list">
+        <li> <a href="#df"> Home </a></li>
+        <li> <a routerLink="/aboutus">About us</a></li>
+        <li> <a routerLink="/menu">Menu</a></li>
+        <li> <a routerLink="/cart">Cart</a></li>
+    </ul>
+    <button class="reservation" (mouseup)="reservationClick()"> Reservation </button>
+</nav>

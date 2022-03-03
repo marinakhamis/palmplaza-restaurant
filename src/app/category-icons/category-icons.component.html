@@ -1,0 +1,11 @@
+<section class="container-md">
+    <ul class="row">
+        <li class="row col-md-2 mb-2 shadow-lg rounded" *ngFor="let name of title; let i=index">
+            <a [routerLink]="linkRouter[i]">
+                <img [src]=src[i] />
+                <h6 >{{name}}</h6>
+            </a>
+        </li>
+    </ul>
+</section>
+

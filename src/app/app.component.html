@@ -1,0 +1,4 @@
+<app-nav-bar (onReservationClick)="toggleReservation = !toggleReservation"></app-nav-bar>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+<app-reserve *ngIf="toggleReservation"> </app-reserve>

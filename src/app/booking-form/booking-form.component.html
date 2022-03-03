@@ -1,0 +1,165 @@
+<div class="container col-9 fs-5 text-center">
+    <div class="row mt-4">
+
+
+        <div class="col">
+            <h4 class="mb-3 f-size-m" style="
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                display: inline-block;
+                position: relative;">Opening Hours</h4>
+            <ul class="opening-hurs " style="list-style: none;">
+                <li style="padding: 0px 30px 0px 0px; display: inline-block; color: #c59d5f;">Mon – Fri
+                    <p class="open-time">9:00 is – 10:00 pm</p>
+                </li>
+                <li>Sat – Sun
+                    <p class="open-time">10:00 am – 11:00 pm</p>
+                </li>
+            </ul>
+    
+        </div>
+    
+        <div class="col">
+            <h4>Coffee Hours</h4>
+            <ul class="opening-hurs" style="list-style: none;">
+                <li>Mon – Fri
+                    <p class="open-time">7:00 am – 10:00 pm</p>
+                </li>
+                <li>Sat – Sun
+                    <p class="open-time">8:00 is – 10:00 pm</p>
+                </li>
+            </ul>
+    
+        </div>
+    
+        <app-about-us></app-about-us>
+    </div>
+    <div style="margin:0px,15px; padding: 20px,0px,0px">
+        <form #ContactUs="ngForm" novalidate (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-md-4">
+                    <span>
+                        <input type="text" #name="ngModel" [class.is-invalid]="name.invalid &&name.touched" name="your-name"
+                            [(ngModel)]="BookingFormData.name" size="40" required>
+    
+                    </span>
+                </div>
+                <div class="col-md-4">
+                    <span>
+                        <input type="email" #email="ngModel" name="your-email" [(ngModel)]="BookingFormData.email" size="40"
+                            aria-invalid="false" placeholder="Your Email" required
+                            style="background: transparent;  border: 1px solid #c59d5f"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    </span>
+                </div>
+                <div class="col-md-4">
+                    <span>
+                        <input type="tel" #phone="ngModel" name="your-phone" [(ngModel)]="BookingFormData.phone" size="40"
+                            aria-invalid="false" placeholder="Your Phone"
+                            style="background: transparent;  border: 1px solid #c59d5f">
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <span>
+                        <input type="date" name="selectdate" [(ngModel)]="BookingFormData.date" aria-required="true"
+                            aria-invalid="false" style="background: transparent;  border: 1px solid #c59d5f"
+                            pattern="\d{1,2}/\d{1,2}/\d{4}">
+                    </span>
+                </div>
+                <div class="col-md-4">
+                    <span>
+                        <select name="select-time" #time="ngModel" value="" aria-required="true"
+                            [(ngModel)]="BookingFormData.time" aria-invalid="false" required>
+                            <option value="Time" selected>Time</option>
+                            <option value="09:00 - 09:30">09:00 - 09:30 </option>
+                            <option value="09:30 - 10:00">09:30 - 10:00</option>
+                            <option value="10:00 - 10:30">10:00 - 10:30</option>
+                            <option value="10:30 - 11:00">10:30 - 11:00</option>
+                            <option value="11:00 - 11:30">11:00 - 11:30</option>
+                            <option value="11:30 - 12:00">11:30 - 12:00</option>
+                            <option value="12:00 - 12:30">12:00 - 12:30</option>
+                            <option value="12:30 - 13:00">12:30 - 13:00</option>
+                            <option value="13:00 - 13:30">13:00 - 13:30</option>
+                            <option value="13:30 - 14:00">13:30 - 14:00</option>
+                            <option value="14:00 - 14:30">14:00 - 14:30</option>
+                            <option value="14:30 - 15:00">14:30 - 15:00</option>
+                            <option value="15:00 - 15:30">15:00 - 15:30</option>
+                            <option value="15:30 - 16:00">15:30 - 16:00</option>
+                            <option value="16:00 - 16:30">16:00 - 16:30</option>
+                            <option value="16:30 - 17:00">16:30 - 17:00</option>
+                        </select>
+                    </span>
+                </div>
+                <div class="col-md-4">
+                    <span>
+                        <select name="menu-860" value="" #seats="ngModel" aria-required="true"
+                            [(ngModel)]="BookingFormData.seats" aria-invalid="false">
+                            <option value="Seats" selected>Seats</option>
+                            <option value="1 person">1 person</option>
+                            <option value="2 People">2 People</option>
+                            <option value="3 People">3 People</option>
+                            <option value="4 People">4 People</option>
+                            <option value="5 People">5 People</option>
+                            <option value="6 People">6 People</option>
+                            <option value="7 People">7 People</option>
+                            <option value="8 People">8 People</option>
+                            <option value="20+ People">8+ People</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <p>
+                <span>
+                    <textarea name="your-message" #message="ngModel" aria-required="true"
+                        [(ngModel)]="BookingFormData.message" style="width: 100%;
+            " cols="40" rows="10" aria-invalid="false" placeholder="Your Message">
+            </textarea>
+                </span>
+                <input type="submit" value="Submit Now" style="
+        background-color: #c59d5f; 
+        padding: 25px 30px;
+        text-align: center;">
+            </p>
+            <div aria-hidden="true">
+            </div>
+        </form>
+    </div>
+    <!-- .contact-form -->
+    <!-- .contact-form-wrapper -->
+    
+    <style>
+        input,
+        textarea,
+        select {
+            background: transparent;
+            border: 1px solid #c59d5f;
+    
+        }
+    
+        input,
+        select {
+            padding: 12px 15px;
+            margin-bottom: 20px;
+        }
+    
+        input[type="submit"] {
+            margin-bottom: 0;
+            height: 50px;
+            line-height: 0;
+            width: auto;
+            cursor: pointer;
+        }
+    
+        /*  */
+    </style>
+    
+    <style type="text/css">
+        input:required:invalid,
+        input:focus:invalid {
+            /* insert your own styles for invalid form input */
+            border-color: #dc3232;
+        }
+    </style>
+</div>

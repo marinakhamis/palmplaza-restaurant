@@ -1,0 +1,42 @@
+@use "../../app/header/header.component.scss" as *;
+
+body {
+    font-family: $primary-font-family;
+    line-height: 2em;
+}
+.main-about-us {
+    background-image: url("../../assets/img/about-bg-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 3vh;
+    height: 60vh;
+    margin: 20px auto;
+    h1 {
+        margin: 20px auto;
+        @include cursive($primary-dark-color);
+        font-weight: 800;
+        font-size: 3em;
+    }
+    p {
+        max-width: 50%;
+        margin: 20px auto;
+    }
+    .goto-abt {
+        outline: none;
+        border: solid 2px $primary-color;
+        padding: 10px 24px;
+        background-color: transparent;
+        max-width: 150px;
+        max-height: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $primary-color;
+        &:hover {
+            cursor: pointer;
+            color: $primary-dark-color;
+            border-color: $primary-dark-color;
+        }
+    }
+}

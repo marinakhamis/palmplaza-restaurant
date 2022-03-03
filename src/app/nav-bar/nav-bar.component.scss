@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+$primary-color: #c59d5f;
+$sec-font-family: "Cabin", sans-serif;
+$primary-font-family: "Lato", sans-serif;
+$primary-dark-color: #252525;
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background-color: $primary-dark-color;
+    font-family: $sec-font-family;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: inherit;
+    text-transform: uppercase;
+    color: #fff;
+    .light-logo {
+        display: block;
+        max-width: 200px;
+        max-height: 50px;
+        padding: 5px;
+    }
+    .nav-list {
+        list-style-type: none;
+        li {
+            display: inline-block;
+            a {
+                display: block;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                color: #fff;
+                &:hover,
+                &:active {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .reservation {
+        outline: none;
+        border: solid 2px $primary-color;
+        padding: 10px 24px;
+        background-color: transparent;
+        max-width: 150px;
+        max-height: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        &:hover {
+            background-color: $primary-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.nav::before {
+    content: none;
+}
+.nav::after {
+    content: none;
+}
